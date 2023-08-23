@@ -1,0 +1,178 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--veryLightGray);
+}
+
+header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.headerTitle {
+  color: var(--veryDarkBlue);
+  font-weight: 200;
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+.headerSubTitle {
+  color: var(--veryDarkBlue);
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+}
+
+.headerParagraph {
+  color: var(--grayishBlue);
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cardSupervisor {
+  border-top: 2px solid var(--cyan);
+}
+
+.cardTeam {
+  border-top: 2px solid var(--red);
+}
+
+.cardKarma {
+  border-top: 2px solid var(--orange);
+}
+
+.cardCalc {
+  border-top: 2px solid var(--blue);
+}
+
+.cardSupervisor,
+.cardTeam,
+.cardKarma,
+.cardCalc {
+  background-color: white;
+  width: 270px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 8px #cccc;
+}
+
+.cardTitle {
+  font-weight: bold;
+  color: var(--veryDarkBlue);
+}
+
+.cardParagraph {
+  font-size: 11px;
+  color: var(--grayishBlue);
+}
+
+.cardImage {
+  float: right;
+  padding-top: 20px;
+}
+
+.cardImage img {
+  width: 50px;
+  height: auto;
+}
+
+
+
+@media (max-width: 575px) {
+  header {
+    margin-top: 30px;
+    max-width: 250px;
+  }
+
+  .headerTitle {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .headerSubTitle {
+    font-size: 20px;
+  }
+
+  .headerParagraph {
+    font-size: 12px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .midCards {
+    display: grid;
+    row-gap: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  header {
+    margin-top: 30px;
+    max-width: 350px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    margin-bottom: 50px
+  }
+
+  .midCards {
+    display: grid;
+    row-gap: 25px;
+  }
+
+  .cardKarma {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    margin-top: 50px;
+    max-width: 400px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+  }
+
+  .midCards {
+    display: grid;
+    row-gap: 25px;
+  }
+}
